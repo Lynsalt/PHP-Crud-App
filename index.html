@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Joe's Home made Pies</title>
+
+    <link rel="stylesheet" type="text/css" href="orderform.css" />
+    <script src="js/validate.js"></script>
+   
+  </head>
+
+  <body>
+    <div id="frame">
+      <div id="headingContainer">
+        <div class="heading">Joe's Homemade Pies</div>
+        <div class="subheading">All Pies $1.50 each, Pumkin or Apple!</div>
+      </div>
+      <div id="left">
+        <img src="baker.png" alt="Just-In-Time Donuts" />
+      </div>
+      <form name="orderform" id="orderform" action="process.php" method="POST">
+        <div class="field">
+          First Name: <input type="text" id="fname" name="fname" value="" onkeyup="lettersOnly(this)"/>
+        </div>
+         <div class="field">
+          Last Name: <input type="text" id="lname" name="lname" value="" onkeyup="lettersOnly(this)"/>
+        </div>
+        <div class="field">
+        # of Pumkin Pies: <input type="text" id="pumkinpie" name="pumkinpie" value="" onchange="updateOrder();" onkeyup="numbersOnly(this);"/>
+        </div>
+        <div class="field">
+        # of Apple Pies: <input type="text" id="applepie" name="applepie" value="" onchange="updateOrder();" onkeyup="numbersOnly(this);"/>
+        </div>
+        <div class="field">
+         Telephone No: <input type="Tel" id="telephone" name="telephone" value="" maxlength="12"/>
+        </div>
+        <div class="field">
+        Minutes till pickup: <input type="number" id="pickupminutes" name="pickupminutes" min="20" value="20" onkeyup="numbersOnly(this);" placeholder ="20 mins minimum" />
+        </div>
+        
+        <div class="field">
+        Subtotal: <input type="text" id="subtotal" name="subtotal" value="" readonly="readonly" />
+        </div>
+        <div class="field">
+        Tax: <input type="text" id="tax" name="tax" value="" readonly="readonly" />
+        </div>
+        <div class="field">
+        Total: <input type="text" id="total" name="total" value="" readonly="readonly" />
+        </div>
+        <div class="field">
+        <input type="button" value="Place Order" onclick="placeOrder(this.form);" />
+        <input type="reset" value="Clear" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

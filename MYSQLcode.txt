@@ -1,0 +1,13 @@
+CREATE DATABASE joeorders;
+CREATE TABLE data(
+id INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+firstname VARCHAR(225),
+lastname  VARCHAR(255),
+pumpkinpie VARCHAR(50),
+applepie VARCHAR(50),
+telephone VARCHAR(20),
+pickupminutes	varchar(20),
+subtotal	varchar(50),
+tax	varchar(50),
+total	varchar(100)	
+);
